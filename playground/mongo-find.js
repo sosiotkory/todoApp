@@ -21,17 +21,19 @@ mongoclient.connect('mongodb://localhost:27017/toDoApp', (err, db)=>{
 	// });
 
 
-db.collection('todos').find().count().then((count)=>{
+// db.collection('todos').find().count().then((count)=>{
 
-		console.log(`Todos : ${count}`);
+// 		console.log(`Todos : ${count}`);
 		
-		// console.log(JSON.stringify(docs, undefined, 2));
+// 		// console.log(JSON.stringify(docs, undefined, 2));
 
-	}, (err)=>{
+// 	}, (err)=>{
 
-		console.log('Unable to fetch data', err);
-	});
+// 		console.log('Unable to fetch data', err);
+// 	});
 
+
+db.collection('Users').find({name : "Stephen Korir"}).toArray
 })
 
 
